@@ -48,6 +48,14 @@ complain about trailing whitespace.
 JavaScript
 ----------
 
+Install flymake-jshint::
+
+M-x package-install [ENTER] flymake-jshint
+
+Install js2-mode::
+
+M-x package-install [ENTER] js2-mode
+
 Load `<../emacs/js2-mode-init.el>`_ this will:
 
 #. Make js2-mode your main mode for editing JavaScript.
