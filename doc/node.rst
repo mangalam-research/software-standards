@@ -33,6 +33,3 @@ Louis uses a configuration that differs from the page above in the
 following way:
 
 #. It uses ``local`` rather than ``.local``.
-
-#. No ``~/.node_modules`` symlink. (Does not seem to impact npm's
-   ability to find modules.)
