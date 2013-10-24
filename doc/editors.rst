@@ -56,6 +56,10 @@ Install js2-mode::
 
 M-x package-install [ENTER] js2-mode
 
+.. warning:: Make sure you install js2-mode 20130913 or later. This
+             may require that you add the Melpa archive just to add
+             js2-mode and then remove this archive (see above).
+
 Load `<../emacs/js2-mode-init.el>`_ this will:
 
 #. Make js2-mode your main mode for editing JavaScript.
