@@ -1,3 +1,6 @@
+(require 'newcomment)
+(require 'ispell)
+
 (defun clean-local-words ()
   "Removes from LocalWords lists those words that are not present
 in the buffer (elsewhere than in LocalWords). Also removes
