@@ -20,8 +20,7 @@ duplicate words from LocalWords."
             (while (re-search-forward " *\\([^ ]+\\)" eol t)
               (puthash (match-string-no-properties 1) t words)
             )
-            (delete-region (point-at-bol)
-                           (min (1+ (point-at-eol)) (point-max)))
+            (delete-region (point-at-bol) (min (1+ eol) (point-max)))
           )
         )
         ;; Check whether the words are actually in the file.
