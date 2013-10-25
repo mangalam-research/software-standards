@@ -12,16 +12,20 @@ duplicate words from LocalWords."
       (let* (eol ;; EOL position on the current line.
              (words (make-hash-table :test 'equal)) ;; Words gathered.
              final ;; Final list of words.
+             (old-kill-ring kill-ring)
             )
-        (while (search-forward ispell-words-keyword nil t)
-          ;; Only do it if we are in a comment.
-          (when (save-excursion (comment-beginning))
-            (setq eol (point-at-eol))
-            (while (re-search-forward " *\\([^ ]+\\)" eol t)
-              (puthash (match-string-no-properties 1) t words)
+        (unwind-protect
+            (while (search-forward ispell-words-keyword nil t)
+              ;; Only do it if we are in a comment.
+              (when (save-excursion (comment-beginning))
+                (setq eol (point-at-eol))
+                (while (re-search-forward " *\\([^ ]+\\)" eol t)
+                  (puthash (match-string-no-properties 1) t words)
+                )
+                (kill-whole-line)
+              )
             )
-            (kill-whole-line)
-          )
+          (setq kill-ring old-kill-ring)
         )
         ;; Check whether the words are actually in the file.
         (maphash (lambda (key value)
