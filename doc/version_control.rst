@@ -11,7 +11,7 @@ Git
    Install the AVH edition of `gitflow
    <https://github.com/petervanderdoes/gitflow>`__. We use this version
    because the original gitflow appears to be unmaintained (as of
-   2013-10-28). The AVH edition contains numerous fixes, the most
+   2013-11-24). The AVH edition contains numerous fixes, the most
    important one being that ``git describe`` can be used again to get
    meaningful build ids.
 
