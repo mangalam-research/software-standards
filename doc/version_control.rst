@@ -48,6 +48,12 @@ Git
    ``develop`` branch. The ``master`` branch only contains a
    succession of stable releases.
 
+   .. note:: There are few rare exceptions to this rule. For instance,
+             generating the documentation for wed must (with very rare
+             exceptions; yes, there are exceptions to the exceptions)
+             be done from ``master`` to get a correct version number
+             in the generated documentation.
+
 Working on Features
 ===================
 
@@ -63,7 +69,8 @@ probably see this name at some point (e.g. ``schema-documentation``,
 
 Use the branch to develop your work and commit there.
 
-When you are reading to submit for inclusion into the Mangalam repository::
+When you are ready to submit for inclusion into the Mangalam
+repository::
 
     $ git flow feature publish
 

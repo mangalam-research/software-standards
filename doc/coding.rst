@@ -33,9 +33,9 @@ As a baseline, all code must:
 Documentation
 =============
 
-All documenation must be:
+All documentation must:
 
-#. spell-checked, including embedded API documentation (e.g. jsdoc, sphinx).
+#. be spell-checked, including embedded API documentation (e.g. jsdoc, sphinx).
 
 #. not contain dangling links.
 
@@ -55,7 +55,7 @@ All JavaScript files must:
 #. as a general rule, JavaScript executed in the browser must not display anything to the JavaScript console. (Sometimes 3rd party libraries do display diagnostic messages to the console. Turn these off only to the extent that they can be turned off by calling the public API differently. If there is no way to turn them off through the API then there's nothing you can do.)
 
 .. note:: There are some rare instances where it is allowable to have
-          some sort of developer mode be turned on and use console.log
+          some sort of developer mode turned that uses ``console.log``
           to output diagnosis. This is to be used sparingly.
 
 Python
@@ -76,3 +76,5 @@ All Python files must be:
 
 .. note:: There may be cases where an absence of documentation is
           tolerated.
+
+..  LocalWords:  whitespace API jsdoc wed's jshint pylintrc
