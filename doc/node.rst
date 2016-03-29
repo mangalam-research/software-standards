@@ -8,12 +8,8 @@ Installing Node
 Binary
 ------
 
-#. Uninstall your previous version of node.
-
-#. Get the latest binary from http://nodejs.org/download/
-
-#. Symlink the two files in ``bin/`` to a location that is in your
-   ``PATH``. (Louis symlinks to ``~/local/bin/``.)
+#. Update your distribution to load Node through its `package manager
+   <https://nodejs.org/en/download/package-manager/>`_.
 
 Source
 ------
