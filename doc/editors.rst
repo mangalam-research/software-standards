@@ -155,6 +155,47 @@ making jsdoc documentation look better::
      '(js2-jsdoc-value ((t (:foreground "gold4")))))
 
 
+Spell Checking
+==============
+
+For spell-checking files that are not primarly containing source code,
+you can use Emacs's default spell-checker: ispell. Or you can use
+something compatible.
+
+Flyspell has a mode that allows spell checking source code without
+having the spell checker flag identifiers in the code as being badly
+spelled. So the recommended method for spell checking code is to use
+``flyspell-prog-mode``, and ``C-,`` from the top of the buffer to go
+through spelling errors one by one.
+
+Flyspell does not support adding words to ``LocalWords`` or to your
+personal dictionary directly. If you want to do either, you can start
+ispell using ``ESC-$`` (or ``Alt-$``) and:
+
+* select the ``A`` (yes, capital) option to add to ``LocalWords``,
+
+* select the ``i`` option to add the word to your personal dictionary.
+
+``LocalWords``
+--------------
+
+You will see source code files with commented out lines that start
+with ``LocalWords``. The words listed there are words that the spell
+checker will ignore when checking words. The advantage of this list is
+that, because it is saved in the file, it is remembered from spelling
+session to spelling session so you don't have to keep remembering to
+skip variable and function names that appear in comments.
+
+When to put something in ``LocalWords`` and when to put something in
+your personal dictionary? If the word you want to add is general
+English, then put it in your personal dictionary. If it is an
+identifier for a function or a variable, or a coinage that appears
+very specific to the file being spell-checked, put it in
+``LocalWords``.
+
+The files ``emacs/clean-local-words.el`` contains a function for
+cleaning the ``LocalWords`` list from words that are no longer used.
+
 MMM Mode
 ========
 
@@ -190,3 +231,5 @@ flymake operates slowly. There is an `experimental flymake
 problem.
 
 We recommend using ``magit`` to manage git in Emacs.
+
+..  LocalWords:  Flyspell flyspell prog ispell ESC emacs
